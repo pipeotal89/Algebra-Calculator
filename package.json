@@ -24,13 +24,20 @@
   },
   "homepage": "https://github.com/pipeotal89/Algebra-Calculator#readme",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.1",
+    "@typescript-eslint/parser": "^8.61.1",
+    "eslint": "^10.5.0",
     "next": "^16.2.9",
+    "postcss": "^8.5.15",
+    "prettier": "^3.8.4",
+    "prettier-eslint": "^17.1.1",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
     "@types/node": "25.9.3",
     "@types/react": "19.2.17",
-    "typescript": "6.0.3"
+    "typescript": "^6.0.3"
   }
 }
