@@ -41,33 +41,66 @@ export default function FirstOperation() {
             2. Ahora agrega los valores de tu polinomio:
           </h1>
         </div>
-        <div className="w-full py-5 px-50 flex justify-center">
-          <div className={`columns-${2 * (selected - 1) + 1} w-full`}>
-            <div className="w-full flex justify-center">
-              {selected >= 5 ? "x^5" : ""}
+        <div className="w-full py-10 flex flex-row justify-center items-center">
+          {selected >= 5 ? (
+            <div className="flex flex-row">
+              <div className="flex justify-center mx-10">
+                <label>
+                  <input className="bg-main-500 w-20" /> &nbsp; &nbsp; x^5
+                </label>
+              </div>
+              <div className="flex justify-center mx-5">+</div>
             </div>
-            <div className="w-full flex justify-center">
-              {selected >= 5 ? "+" : ""}
+          ) : (
+            ""
+          )}
+
+          {selected >= 4 ? (
+            <div className="flex flex-row">
+              <div className="flex justify-center mx-10">
+                <label>
+                  <input className="bg-main-500 w-20" /> &nbsp; &nbsp; x^4
+                </label>
+              </div>
+              <div className="flex justify-center mx-5">+</div>
             </div>
-            <div className="w-full flex justify-center">
-              {selected >= 4 ? "x^4" : ""}
+          ) : (
+            ""
+          )}
+          {selected >= 3 ? (
+            <div className="flex flex-row">
+              <div className="flex justify-center mx-10">
+                <label>
+                  <input className="bg-main-500 w-20" /> &nbsp; &nbsp; x^3
+                </label>
+              </div>
+              <div className="flex justify-center mx-5">+</div>
             </div>
-            <div className="w-full flex justify-center">
-              {selected >= 4 ? "+" : ""}
+          ) : (
+            ""
+          )}
+          {selected >= 2 ? (
+            <div className="flex flex-row">
+              <div className="flex justify-center mx-10">
+                <label>
+                  <input className="bg-main-500 w-20" /> &nbsp; &nbsp; x^2
+                </label>
+              </div>
+              <div className="flex justify-center mx-5">+</div>
             </div>
-            <div className="w-full flex justify-center">
-              {selected >= 3 ? "x^3" : ""}
-            </div>
-            <div className="w-full flex justify-center">
-              {selected >= 3 ? "+" : ""}
-            </div>
-            <div className="w-full flex justify-center">
-              {selected >= 2 ? "x^2" : ""}
-            </div>
-            <div className="w-full flex justify-center">
-              {selected >= 2 ? "+" : ""}
-            </div>
-            <div className="w-full flex justify-center">x</div>
+          ) : (
+            ""
+          )}
+          <div className="flex justify-center mx-5">
+            <label>
+              <input className="bg-main-500 w-20" /> &nbsp; &nbsp; x
+            </label>
+          </div>
+          <div className="flex justify-center mx-5">=</div>
+          <div className="flex justify-center mx-5">
+            <label>
+              <input className="bg-main-500 w-20" /> &nbsp; &nbsp;
+            </label>
           </div>
         </div>
       </div>
