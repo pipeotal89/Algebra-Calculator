@@ -2,11 +2,11 @@ import "./globals.css";
 import ClickableBox from "./components/clickable-box";
 
 const operations = [
-  "Valores de X en un Polinomio",
-  "Sistemas simples de dos variables",
-  "Reemplazar variable en una función",
-  "Simplificar ecuaciones de una variable",
-  "Graficar una función de una variable",
+  ["Valores de X en un Polinomio", "/valores-de-x-en-polinomio"],
+  ["Sistemas simples de dos variables", "/sistemas-dos-variables"],
+  ["Reemplazar variable en una función", "/reemplazar-variable"],
+  ["Simplificar ecuaciones de una variable", "simplificar-ecuacion"],
+  ["Graficar una función de una variable", "graficar-funcion"],
 ];
 
 export default function Page() {
@@ -18,7 +18,7 @@ export default function Page() {
         </h1>
       </div>
       {operations.map((item) => (
-        <ClickableBox operation={item} key={item} />
+        <ClickableBox operation={item[0]} url={item[1]} key={item[1]} />
       ))}
     </div>
   );
