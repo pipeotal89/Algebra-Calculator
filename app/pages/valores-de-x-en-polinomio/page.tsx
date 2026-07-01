@@ -5,15 +5,20 @@ import BackButton from "../../components/back-button";
 import { useState } from "react";
 const math = require("mathjs");
 
+interface ComplexNumber {
+  re: number;
+  im: number;
+}
+
 export default function FirstOperation() {
   const [selected, setSelected] = useState(1);
   const [polinomy, setPolinomy] = useState([0, 0, 0, 0]);
-  const [result, setResult] = useState([0]);
+  const [result, setResult] = useState<Array<ComplexNumber>>([]);
   const [resultVis, setResultVis] = useState(false);
   const [errorMsgVis, setErrorMsgVis] = useState(false);
   const handleChange = (e) => {
     setSelected(e.target.value);
-    setPolinomy([0, 0, 0, 0, 0]);
+    setPolinomy([0, 0, 0, 0]);
   };
   const listResult = result.map((r, index) => (
     <li
@@ -21,11 +26,13 @@ export default function FirstOperation() {
       className="w-full py-2 justify-center text-center font-general text-button text-main-500"
     >
       &#8226; &nbsp; &nbsp;
-      {typeof r == "number"
-        ? r.toFixed(2).replace(/[.,]00$/, "")
+      {r.im == 0
+        ? r.re.toFixed(2).replace(/[.,]00$/, "")
         : r.re.toFixed(2).replace(/[.,]00$/, "") +
           (r.im < 0 ? " - " : " + ") +
-          Math.abs(r.im.toFixed(2).replace(/[.,]00$/, "")) +
+          Math.abs(r.im)
+            .toFixed(2)
+            .replace(/[.,]00$/, "") +
           "j"}
     </li>
   ));
@@ -39,18 +46,26 @@ export default function FirstOperation() {
   }
 
   function calculateRoots() {
+    var resultTransformed: Array<ComplexNumber> = [];
     if (polinomy[1] == 0 && polinomy[2] == 0 && polinomy[3] == 0) {
       setErrorMsgVis(true);
       setResultVis(false);
     } else {
       setErrorMsgVis(false);
-      setResult(
-        math.polynomialRoot(polinomy[0], polinomy[1], polinomy[2], polinomy[3]),
+      var temp = math.polynomialRoot(
+        polinomy[0],
+        polinomy[1],
+        polinomy[2],
+        polinomy[3],
       );
-      console.log(result);
-      setResultVis(true);
+      temp.forEach((value, index) => {
+        resultTransformed[index] = math.complex(value);
+      });
     }
+    setResult(resultTransformed);
+    setResultVis(true);
   }
+
   return (
     <div className="w-full min-h-screen bg-secondary-500">
       <div className="w-full py-5">
