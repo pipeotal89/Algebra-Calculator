@@ -47,11 +47,13 @@ export default function FirstOperation() {
 
   function calculateRoots() {
     var resultTransformed: Array<ComplexNumber> = [];
+    console.log(polinomy);
     if (polinomy[1] == 0 && polinomy[2] == 0 && polinomy[3] == 0) {
       setErrorMsgVis(true);
       setResultVis(false);
     } else {
       setErrorMsgVis(false);
+      setResultVis(true);
       var temp = math.polynomialRoot(
         polinomy[0],
         polinomy[1],
@@ -63,7 +65,6 @@ export default function FirstOperation() {
       });
     }
     setResult(resultTransformed);
-    setResultVis(true);
   }
 
   return (
