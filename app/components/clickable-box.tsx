@@ -12,17 +12,17 @@ export default function ClickableBox({ operation, url }: ClickableBoxProps) {
   const router = useRouter();
 
   return (
-    <div className="w-full h-25">
+    <div className="w-full lg:h-25 md:h-20 h-18">
       <div className="h-full mx-8 my-6 px-4">
         <button
           className="h-full w-full px-8 rounded-xl bg-secondary-500 hover:bg-secondary-700 cursor-pointer"
           onClick={() => router.push("/pages" + url)}
         >
-          <div className="columns-2">
-            <p className="text-left font-general text-button text-main-500">
+          <div className="flex columns-2">
+            <p className="w-4/5 text-left font-general lg:text-button md:text-buttonmd sm:text-buttonsm text-main-500">
               {operation}
             </p>
-            <p className="text-right font-general text-button text-main-500">
+            <p className="w-1/5 text-right font-general lg:text-button md:text-buttonmd sm:text-buttonsm text-main-500">
               &gt;
             </p>
           </div>

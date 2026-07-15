@@ -12,4 +12,10 @@
 
   --text-button: 1.5rem;
   --text-button--font-weight: 600;
+
+  --text-buttonmd: 1.2rem;
+  --text-buttonmd--font-weight: 600;
+
+  --text-buttonsm: 1rem;
+  --text-buttonsm--font-weight: 600;
 }
