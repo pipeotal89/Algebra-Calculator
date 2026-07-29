@@ -3,7 +3,7 @@ import ClickableBox from "./components/clickable-box";
 
 const operations = [
   ["Valores de X en un Polinomio", "/valores-de-x-en-polinomio"],
-  ["Sistemas simples de dos variables", "/sistemas-dos-variables"],
+  ["Sistemas simples de una o más variables", "/sistemas-multivariable"],
   ["Reemplazar variable en una función", "/reemplazar-variable"],
   ["Simplificar ecuaciones de una variable", "simplificar-ecuacion"],
   ["Graficar una función de una variable", "graficar-funcion"],
