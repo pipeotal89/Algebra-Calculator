@@ -29,11 +29,11 @@ export default function MultivariableEcuation({
         <div className="flex justify-center lg:mx-8 md:mx-5 mx-3">
           <label>
             <input
-              className="bg-main-500 lg:w-20 md:w-15 w-15"
+              className="px-2 bg-main-500 lg:w-20 md:w-15 w-15"
               value={matrix[position][0]}
               onChange={(e) => updateArray(e, position, 0)}
             />
-            &nbsp; &nbsp; &nbsp; &nbsp; x
+            &nbsp; &nbsp; x
           </label>
         </div>
         <div className="flex justify-center lg:mx-5 md:mx-2 mx-5">
@@ -45,7 +45,7 @@ export default function MultivariableEcuation({
           <div className="flex justify-center lg:mx-8 md:mx-5 mx-3">
             <label>
               <input
-                className="bg-main-500 lg:w-20 md:w-15 w-15"
+                className="px-2 bg-main-500 lg:w-20 md:w-15 w-15"
                 value={matrix[position][1]}
                 onChange={(e) => updateArray(e, position, 1)}
               />
@@ -64,7 +64,7 @@ export default function MultivariableEcuation({
           <div className="flex justify-center lg:mx-8 md:mx-5 mx-3">
             <label>
               <input
-                className="bg-main-500 lg:w-20 md:w-15 w-15"
+                className="px-2 bg-main-500 lg:w-20 md:w-15 w-15"
                 value={matrix[position][2]}
                 onChange={(e) => updateArray(e, position, 2)}
               />
@@ -80,7 +80,7 @@ export default function MultivariableEcuation({
         <div className="flex justify-center lg:mx-8 md:mx-5 mx-2">
           <label>
             <input
-              className="bg-main-500 lg:w-20 md:w-15 w-15"
+              className="px-2 bg-main-500 lg:w-20 md:w-15 w-15"
               value={constants[position]}
               onChange={(e) => updateArray(e, position, 3)}
             />

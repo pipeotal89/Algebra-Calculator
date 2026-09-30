@@ -109,7 +109,7 @@ export default function FirstOperation() {
               <div className="flex justify-center lg:mx-8 md:mx-5 mx-3">
                 <label>
                   <input
-                    className="bg-main-500 lg:w-20 md:w-15 w-15"
+                    className="px-2 bg-main-500 lg:w-20 md:w-15 w-15"
                     value={polinomy[3]}
                     onChange={(e) => updateArray(e, 3)}
                   />
@@ -126,7 +126,7 @@ export default function FirstOperation() {
               <div className="flex justify-center lg:mx-8 md:mx-5 mx-3">
                 <label>
                   <input
-                    className="bg-main-500 lg:w-20 md:w-15 w-15"
+                    className="px-2 bg-main-500 lg:w-20 md:w-15 w-15"
                     value={polinomy[2]}
                     onChange={(e) => updateArray(e, 2)}
                   />
@@ -142,7 +142,7 @@ export default function FirstOperation() {
             <div className="flex justify-center lg:mx-8 md:mx-5 mx-3">
               <label>
                 <input
-                  className="bg-main-500 lg:w-20 md:w-15 w-15"
+                  className="px-2 bg-main-500 lg:w-20 md:w-15 w-15"
                   value={polinomy[1]}
                   onChange={(e) => updateArray(e, 1)}
                 />
@@ -155,7 +155,7 @@ export default function FirstOperation() {
             <div className="flex justify-center lg:mx-8 md:mx-5 mx-2">
               <label>
                 <input
-                  className="bg-main-500 lg:w-20 md:w-15 w-15"
+                  className="px-2 bg-main-500 lg:w-20 md:w-15 w-15"
                   value={polinomy[0]}
                   onChange={(e) => updateArray(e, 0)}
                 />
