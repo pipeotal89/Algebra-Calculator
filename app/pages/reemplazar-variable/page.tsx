@@ -9,7 +9,6 @@ const math = require("mathjs");
 export default function ThirdOperation() {
   const [expression, setExpression] = useState("");
   const [caret, setCaret] = useState(0);
-  const { ref, updateCaret } = useCaretPosition();
 
   const handleExpression = (e) => {
     setCaret(e.target.selectionStart);
